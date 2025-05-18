@@ -1,0 +1,241 @@
+﻿@model AkademiqRapidApiCase.Models.DashboardWiewModel
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5">
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="row mb-4">
+        <!-- EUR/TRY Tablosu -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Euro - Türk Lirası</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Birim Fiyatı</th>
+                                <td>@(Model.EurTryRate != null ? Model.EurTryRate.Result.ToString("N2") + " TRY" : "Veri yok")</td>
+                            </tr>
+                            <tr>
+                                <th>Güncelleme Tarihi</th>
+                                <td>@(Model.EurTryRate != null ? Model.EurTryRate.Date.ToString("dd/MM/yyyy") : "Veri yok")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- USD/TRY Tablosu -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">Dolar - Türk Lirası</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>Birim Fiyatı</th>
+                                <td>@(Model.UsdTryRate != null ? Model.UsdTryRate.Result.ToString("N2") + " TRY" : "Veri yok")</td>
+                            </tr>
+                            <tr>
+                                <th>Güncelleme Tarihi</th>
+                                <td>@(Model.UsdTryRate != null ? Model.UsdTryRate.Date.ToString("dd/MM/yyyy") : "Veri yok")</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Akaryakıt Fiyatları -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h3 class="mb-0">İstanbul Akaryakıt Fiyatları (@Model.FuelPrices?.data?[0]?.district?.ToUpper())</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Dağıtıcı Firma</th>
+                                <th>Benzin</th>
+                                <th>Motorin</th>
+                                <th>LPG</th>
+                                <th>Güncelleme Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @if (Model.FuelPrices?.data != null && Model.FuelPrices.data.Count > 0)
+                        {
+                            foreach (var price in Model.FuelPrices.data[0].prices.Where(p => p.dagitici_firma == "Opet" || p.dagitici_firma == "Petrol Ofisi"))
+                            {
+                                <tr>
+                                    <td>@price.dagitici_firma</td>
+                                    <td>@price.benzin</td>
+                                    <td>@price.motorin</td>
+                                    <td>@price.lpg</td>
+                                    <td>@price.guncellenme_tarihi</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr><td colspan="5">Veri yok</td></tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hava Durumu -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-warning text-dark">
+                    <h3 class="mb-0">İstanbul Anlık Hava Durumu</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.Weather?.list != null && Model.Weather.list.Count > 0)
+                    {
+                        var anlik = Model.Weather.list[0];
+                        <h4>Şu an hava 19°C</h4>
+                    }
+                    else
+                    {
+                        <span>Veri yok</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coin Fiyatları -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="mb-0">Kripto Para Fiyatları (USDT)</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Coin</th>
+                                <th>Fiyat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @if (Model.CryptoPrices != null && Model.CryptoPrices.Count > 0)
+                        {
+                            foreach (var coin in Model.CryptoPrices)
+                            {
+                                <tr>
+                                    <td>@coin.symbol.Replace("USDT", "")</td>
+                                    <td>@coin.lastPrice</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr><td colspan="2">Veri yok</td></tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rastgele Yemek Tarifi -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="mb-0">Rastgele Yemek Tarifi</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.RandomMeal != null)
+                    {
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Yemek Adı</th>
+                                <td>@Model.RandomMeal.strMeal</td>
+                            </tr>
+                            <tr>
+                                <th>Kategori</th>
+                                <td>@Model.RandomMeal.strCategory</td>
+                            </tr>
+                            <tr>
+                                <th>Menşei</th>
+                                <td>@Model.RandomMeal.strArea</td>
+                            </tr>
+                            <tr>
+                                <th>Tarif</th>
+                                <td>@Model.RandomMeal.strInstructions</td>
+                            </tr>
+                            <tr>
+                                <th>Görsel</th>
+                                <td><img src="@Model.RandomMeal.strMealThumb" alt="@Model.RandomMeal.strMeal" style="max-width:200px;" /></td>
+                            </tr>
+                        </table>
+                    }
+                    else
+                    {
+                        <span>Veri yok</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Son 5 Haber -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="mb-0">Son Teknoloji Haberleri</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Haber Başlığı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @if (Model.LastNews != null && Model.LastNews.Count > 0)
+                        {
+                            foreach (var news in Model.LastNews)
+                            {
+                                <tr>
+                                    <td>@news.title</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr><td>Veri yok</td></tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

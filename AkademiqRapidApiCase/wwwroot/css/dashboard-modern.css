@@ -1,0 +1,59 @@
+body {
+    background: #f4f6fb;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.04);
+    margin-bottom: 32px;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07);
+}
+.card-header {
+    border-radius: 18px 18px 0 0 !important;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    padding: 18px 24px;
+}
+.card-body {
+    padding: 24px;
+}
+.table {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.table th {
+    background: #f7f7fa;
+    font-weight: 600;
+    color: #333;
+    border: none;
+    font-size: 1rem;
+}
+.table td {
+    border: none;
+    font-size: 1rem;
+    color: #444;
+}
+.table tr:hover td {
+    background: #f0f4fa;
+}
+.alert {
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+img {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+    .card-body { padding: 12px; }
+    .card-header { font-size: 1.1rem; padding: 12px 10px; }
+    .table th, .table td { font-size: 0.95rem; }
+} 

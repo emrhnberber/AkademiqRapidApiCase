@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|c:\\visualstudioprojeleri\\akademiqrapidapicase\\akademiqrapidapicase\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|solutionrelative:akademiqrapidapicase\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|c:\\visualstudioprojeleri\\akademiqrapidapicase\\akademiqrapidapicase\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|solutionrelative:akademiqrapidapicase\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|c:\\visualstudioprojeleri\\akademiqrapidapicase\\akademiqrapidapicase\\models\\fuelpriceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|solutionrelative:akademiqrapidapicase\\models\\fuelpriceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|c:\\visualstudioprojeleri\\akademiqrapidapicase\\akademiqrapidapicase\\models\\dashboardwiewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58874F51-BFBD-438E-B6CD-36AD14EACABE}|AkademiqRapidApiCase\\AkademiqRapidApiCase.csproj|solutionrelative:akademiqrapidapicase\\models\\dashboardwiewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FuelPriceResponse.cs",
+              "DocumentMoniker": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Models\\FuelPriceResponse.cs",
+              "RelativeDocumentMoniker": "AkademiqRapidApiCase\\Models\\FuelPriceResponse.cs",
+              "ToolTip": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Models\\FuelPriceResponse.cs",
+              "RelativeToolTip": "AkademiqRapidApiCase\\Models\\FuelPriceResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T17:25:51.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "AkademiqRapidApiCase\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "AkademiqRapidApiCase\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-18T17:19:52.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardWiewModel.cs",
+              "DocumentMoniker": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Models\\DashboardWiewModel.cs",
+              "RelativeDocumentMoniker": "AkademiqRapidApiCase\\Models\\DashboardWiewModel.cs",
+              "ToolTip": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Models\\DashboardWiewModel.cs",
+              "RelativeToolTip": "AkademiqRapidApiCase\\Models\\DashboardWiewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T11:17:06.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "AkademiqRapidApiCase\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\VisualStudioProjeleri\\AkademiqRapidApiCase\\AkademiqRapidApiCase\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "AkademiqRapidApiCase\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T11:16:48.232Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
